@@ -11,7 +11,7 @@ export default function Riwayat() {
   const navigate = useNavigate()
 
   const terimaBarang = async (id) => {
-    const response = await fetch(`http://localhost:5000/ajuan/${id}/balas`, {
+    const response = await fetch(`http://localhost:5000/ajuan/${id}/edit`, {
       method: "PUT",
       headers: {
         "Authorization": `Bearer ${token}`,
@@ -57,7 +57,7 @@ export default function Riwayat() {
                   </Link></td>
                 {pengajuan.status === "Dikirim" ? (
                   <td>
-                    <button onClick={() => terimaBarang(pengajuan.id)}>Diterima</button>
+                    Diterima
                   </td>
                 ) : <td></td>}
               </tr>

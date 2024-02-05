@@ -58,7 +58,7 @@ export default function DetailRiwayat() {
 
   const submit = async (approve) => {
     try {
-      const response = await fetch(`http://localhost:5000/ajuan/${id}`, {
+      const response = await fetch(`http://localhost:5000/ajuan/${id}/edit`, {
         method: "PUT",
         headers: {
           "Authorization": `Bearer ${token}`,
