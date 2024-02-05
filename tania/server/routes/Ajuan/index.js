@@ -8,7 +8,7 @@ const router = require("express").Router();
 router.post('/', authentication, AjuanController.createAjuan);
 router.get('/', authentication, AjuanController.getAjuan);
 router.get('/:id', authentication, AjuanController.getAjuanId);
-router.put('/:id', authentication, isUserOwnAjuan, AjuanController.updateAjuan);
+router.put('/:id/edit', authentication, isUserOwnAjuan, AjuanController.updateAjuan);
 router.put('/:id', authentication, isAdmin, AjuanController.balasAjuan);
 router.put('/:id/balas', authentication, isUserOwnAjuan, AjuanController.balasAjuanAdmin);
 // router.put("/:id", authentication, isUserOwnReviewandAnswer, AnswerController.updateAnswer);
